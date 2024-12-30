@@ -20,9 +20,22 @@ body {
     font-size: 1.2rem;
 }
 
-.section {
-    padding: 2rem 1rem;
+/* .section {
+    padding: 20px 0;
 }
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.section ul li {
+    margin: 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+} */
 
 .about-me {
     padding-right: 1rem;
@@ -54,10 +67,79 @@ body {
 #contact-details{
     display: none;
 }
-ul{
-    padding-left: 10rem;
+.Experiencia li {
+    padding-left: 6rem;
+    padding-right: 5rem;
 }
-li{
-    padding-left: 0%;
-    justify-content: first baseline;
+
+#skills-list {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+
+#skills-list li {
+    margin: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#skills-list li:hover {
+    color: #007bff;
+}
+
+#description-box {
+    position: absolute;
+    /* margin-top: 20px; */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    display: none; /* Oculto por defecto */
+    max-width: 250px;
+    z-index: 10; /* Asegura de que esté encima de otros elementos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+/* Móviles */
+@media (max-width: 768px) {
+    .hero {
+        height: 100%; 
+        padding: 40px 10px; /* Espaciado adicional para un mejor diseño */
+    }
+    #skills-list li {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+    #description-box {
+        position: relative;
+        max-width: 100%;
+        margin-top: 10px;
+        left: 0;
+        top: 0;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1200px) {
+    #skills-list li {
+        font-size: 1.2rem;
+    }
+
+    #description-box {
+        max-width: 250px;
+    }
+}
+
+/* PCs */
+@media (min-width: 1200px) {
+    #skills-list li {
+        font-size: 1.5rem;
+    }
+
+    #description-box {
+        max-width: 300px;
+    }
 }

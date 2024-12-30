@@ -15,21 +15,24 @@
 </header>
 
 <section class="section">
-    <div class="container d-flex">
-        <div class="about-me col-md-6">
+    <div class="container">
+        <div class="row">
+        <div class="about-me col-12 col-md-6 mb-4">
             <h2>Sobre Mí</h2>
             <p>Soy un técnico especializado en seguridad informática con experiencia en implementar, gestionar y monitorear sistemas seguros. Mi objetivo es prevenir amenazas, garantizar la continuidad de los servicios y proteger la integridad de la información.</p>
         </div>
-        <div class="skills-carousel col-md-6">
+        <div class="skills-carousel col-12 col-md-6">
             <h2 id="Habilidades">Habilidades</h2>
-            <ul>
-                <li>Seguridad de Redes</li>
-                <li>Gestión de Servidores</li>
-                <li>Auditorías de Seguridad</li>
-                <li>Gestión de Infraestructura en Contenedores</li>
-                <li>Automatización de Procesos</li>
-                <li>Backups y Recuperación de Datos</li>
+            <ul id="skills-list">
+                <li id="network-security">Seguridad de Redes</li>
+                <li id="server-management">Gestión de Servidores</li>
+                <li id="security-audits">Auditorías de Seguridad</li>
+                <li id="container-management">Gestión de Infraestructura en Contenedores</li>
+                <li id="process-automation">Automatización de Procesos</li>
+                <li id="backups-recovery">Backups y Recuperación de Datos</li>
             </ul>
+            <div id="description-box"></div>
+        </div>
         </div>
     </div>
 </section>
@@ -38,7 +41,7 @@
             <div id="skills-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <a href="#experiencia1" class="link-skill" data-bs-toggle="collapse">Implementación de pfSense</a>
+                        <a href="#experiencia1" class="link-exp" data-bs-toggle="collapse">Implementación de pfSense</a>
                         <div id="experiencia1" class="collapse">
                         <ul>
                             <li>Configuré un firewall avanzado para segmentar redes en entornos empresariales.</li>
@@ -47,7 +50,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <a href="#experiencia2" class="link-skill" data-bs-toggle="collapse">Migración a Docker</a>
+                        <a href="#experiencia2" class="link-exp" data-bs-toggle="collapse">Migración a Docker</a>
                         <div id="experiencia2" class="collapse">
                         <ul>
                             <li>Migré servicios críticos como SuiteCRM y JasperServer a contenedores Docker para mejorar la gestión y escalabilidad.</li>
@@ -56,7 +59,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <a href="#experiencia3" class="link-skill" data-bs-toggle="collapse">Auditorías y Seguridad Informática</a>
+                        <a href="#experiencia3" class="link-exp" data-bs-toggle="collapse">Auditorías y Seguridad Informática</a>
                         <div id="experiencia3" class="collapse">
                         <ul>
                             <li>Realicé pruebas de penetración en redes internas para identificar vulnerabilidades y fortalecer la seguridad.</li>
@@ -65,7 +68,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <a href="#experiencia4" class="link-skill" data-bs-toggle="collapse">Monitoreo de Servicios con Nagios Core</a>
+                        <a href="#experiencia4" class="link-exp" data-bs-toggle="collapse">Monitoreo de Servicios con Nagios Core</a>
                         <div id="experiencia4" class="collapse">
                         <ul>
                             <li>Implementé Nagios para monitorear servidores y aplicaciones en tiempo real.</li>
@@ -74,7 +77,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <a href="#experiencia5" class="link-skill" data-bs-toggle="collapse">Gestión de Backups</a>
+                        <a href="#experiencia5" class="link-exp" data-bs-toggle="collapse">Gestión de Backups</a>
                         <div id="experiencia5" class="collapse">
                         <ul>
                             <li>Configuré respaldos automatizados para servidores y bases de datos utilizando Timeshift e IDrive.</li>
@@ -83,7 +86,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <a href="#experiencia6" class="link-skill" data-bs-toggle="collapse">Gestión de Servidores Linux y Windows</a>
+                        <a href="#experiencia6" class="link-exp" data-bs-toggle="collapse">Gestión de Servidores Linux y Windows</a>
                         <div id="experiencia6" class="collapse">
                         <ul>
                             <li>Administré servidores Linux Ubuntu y Windows Server 2012 para aplicaciones críticas de negocio.</li>
@@ -92,7 +95,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <a href="#experiencia7" class="link-skill" data-bs-toggle="collapse">Automatización de Migración de Datos</a>
+                        <a href="#experiencia7" class="link-exp" data-bs-toggle="collapse">Automatización de Migración de Datos</a>
                         <div id="experiencia7" class="collapse">
                         <ul>
                             <li>Diseñé un proceso automatizado para sincronizar bases de datos entre sistemas ERP y páginas de comercio electrónico.</li>
