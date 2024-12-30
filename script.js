@@ -28,7 +28,6 @@ document.getElementById("submit-password").addEventListener("click", function ()
     }
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
     // Mapa de habilidades con sus descripciones
     const descriptions = {
@@ -43,30 +42,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const skillsList = document.getElementById("skills-list");
     const descriptionBox = document.getElementById("description-box");
 
-    // Agregar eventos a cada elemento de la lista
+    // Mostrar descripción al pasar el mouse sobre un elemento
     skillsList.addEventListener("mouseover", function (event) {
         const skillId = event.target.id;
 
         // Si el elemento tiene una descripción, mostrarla
         if (descriptions[skillId]) {
-            const rect = event.target.getBoundingClientRect(); 
+            const rect = event.target.getBoundingClientRect();
             descriptionBox.textContent = descriptions[skillId];
-
+            descriptionBox.style.display = "block";
             if (window.innerWidth <= 768) {
-                // Para móviles y tablets, muestra el description-box debajo del ítem
-                descriptionBox.style.display = "block";
-                descriptionBox.style.position = "relative";
-                descriptionBox.style.left = "0";
-                descriptionBox.style.top = "0";
-                descriptionBox.style.marginTop = "1px"; // Espacio entre ítem y descripción
+                // Para móviles y tablets: coloca el description-box debajo del ítem
+                descriptionBox.style.position = "absolute";
+                descriptionBox.style.left = `${rect.left + window.scrollX}px`;
+                descriptionBox.style.top = `${rect.bottom + window.scrollY}px`; // Ajusta para considerar el scroll vertical
+                descriptionBox.style.width = `${rect.width}px`; // Igual al ancho del ítem
             } else {
-                // Para pantallas grandes, usa posición absoluta
-                descriptionBox.style.display = "block";
+                // Para pantallas grandes: coloca el description-box a la derecha del ítem
                 descriptionBox.style.position = "absolute";
                 descriptionBox.style.left = `${rect.right}px`;
-                descriptionBox.style.top = `${rect.top}px`;
+                descriptionBox.style.top = `${rect.top + window.scrollY}px`; // Ajusta para considerar el scroll vertical
             }
-        }
         }
     });
 
