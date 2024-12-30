@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Técnico en Seguridad Informática</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+    <h1>Bienvenido,</h1> <h2>Soy David</h2>
+    <p>Protejo sistemas, datos y redes con experiencia y dedicación.</p>
+</header>
+
+<section class="section">
+    <div class="container d-flex">
+        <div class="about-me col-md-6">
+            <h2>Sobre Mí</h2>
+            <p>Soy un técnico especializado en seguridad informática con experiencia en implementar, gestionar y monitorear sistemas seguros. Mi objetivo es prevenir amenazas, garantizar la continuidad de los servicios y proteger la integridad de la información.</p>
+        </div>
+        <div class="skills-carousel col-md-6">
+            <h2 id="Habilidades">Habilidades</h2>
+            <ul>
+                <li>Seguridad de Redes</li>
+                <li>Gestión de Servidores</li>
+                <li>Auditorías de Seguridad</li>
+                <li>Gestión de Infraestructura en Contenedores</li>
+                <li>Automatización de Procesos</li>
+                <li>Backups y Recuperación de Datos</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="Experiencia">
+    <h2>Experiencia</h2>
+            <div id="skills-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#experiencia1" class="link-skill" data-bs-toggle="collapse">Implementación de pfSense</a>
+                        <div id="experiencia1" class="collapse">
+                        <ul>
+                            <li>Configuré un firewall avanzado para segmentar redes en entornos empresariales.</li>
+                            <li>Implementé políticas de seguridad y acceso remoto mediante VPN.</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#experiencia2" class="link-skill" data-bs-toggle="collapse">Migración a Docker</a>
+                        <div id="experiencia2" class="collapse">
+                        <ul>
+                            <li>Migré servicios críticos como SuiteCRM y JasperServer a contenedores Docker para mejorar la gestión y escalabilidad.</li>
+                            <li>Configuré redes internas y respaldos para contenedores en producción.</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#experiencia3" class="link-skill" data-bs-toggle="collapse">Auditorías y Seguridad Informática</a>
+                        <div id="experiencia3" class="collapse">
+                        <ul>
+                            <li>Realicé pruebas de penetración en redes internas para identificar vulnerabilidades y fortalecer la seguridad.</li>
+                            <li>Desarrollé un protocolo de seguridad para proteger puestos de trabajo y la red empresarial.</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#experiencia4" class="link-skill" data-bs-toggle="collapse">Monitoreo de Servicios con Nagios Core</a>
+                        <div id="experiencia4" class="collapse">
+                        <ul>
+                            <li>Implementé Nagios para monitorear servidores y aplicaciones en tiempo real.</li>
+                            <li>Configuré alertas proactivas para reducir el tiempo de inactividad y garantizar la continuidad de servicios.</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#experiencia5" class="link-skill" data-bs-toggle="collapse">Gestión de Backups</a>
+                        <div id="experiencia5" class="collapse">
+                        <ul>
+                            <li>Configuré respaldos automatizados para servidores y bases de datos utilizando Timeshift e IDrive.</li>
+                            <li>Realicé pruebas de recuperación de datos para asegurar la continuidad operativa.</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#experiencia6" class="link-skill" data-bs-toggle="collapse">Gestión de Servidores Linux y Windows</a>
+                        <div id="experiencia6" class="collapse">
+                        <ul>
+                            <li>Administré servidores Linux Ubuntu y Windows Server 2012 para aplicaciones críticas de negocio.</li>
+                            <li>Integré servicios como SuiteCRM con herramientas externas mediante scripts personalizados.</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#experiencia7" class="link-skill" data-bs-toggle="collapse">Automatización de Migración de Datos</a>
+                        <div id="experiencia7" class="collapse">
+                        <ul>
+                            <li>Diseñé un proceso automatizado para sincronizar bases de datos entre sistemas ERP y páginas de comercio electrónico.</li>
+                            <li>Garantizé la integridad de los datos y la actualización en tiempo real.</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#skills-carousel" data-bs-slide="prev" id="arrow-carousel-p">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#skills-carousel" data-bs-slide="next" id="arrow-carousel-n">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+</section>
+<section class="section bg-light">
+    <div class="container">
+        <h2>Conoce más sobre mí</h2>
+        <p>Para eso, introduce la contraseña para acceder a mi contacto:</p>
+        <form id="contact-form">
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" id="password" class="form-control" required>
+            </div>
+            <button type="button" id="submit-password" class="btn btn-primary">Enviar</button>
+        </form>
+        <div id="contact-details">
+            <ul>
+                <li>Email: <a href="mailto:tuemail@example.com">tuemail@example.com</a></li>
+                <li>Teléfono: +34 123 456 789</li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="blank">https://linkedin.com/in/tuusuario</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2024 Portfolio de Técnico en Seguridad Informática. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
