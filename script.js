@@ -28,6 +28,53 @@ document.getElementById("submit-password").addEventListener("click", function ()
     }
 });
 
+document.getElementById("terminal-input").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        const input = e.target.value.toLowerCase().trim();
+        const output = document.getElementById("terminal-output");
+        const line = document.createElement("p");
+        line.innerHTML = `<span class="prompt">davit@shield:~$</span> ${input}`;
+        output.appendChild(line);
+
+        const response = document.createElement("p");
+        response.style.color = "#888"; // Color para la respuesta del sistema
+
+        switch(input) {
+            case 'sudo access':
+    response.style.color = "#ffbd2e"; // Color amarillo para advertencia/sistema
+    response.innerHTML = "Iniciando bypass de seguridad... <br> [OK] Acceso concedido al nivel Root. <br> Desbloqueando datos de contacto...";
+    
+    // Esta es la línea mágica que ya tenés en tu validación de contraseña
+    document.getElementById("contact-details").style.display = "block";
+    
+    // Opcional: Desplazar la pantalla automáticamente hacia los datos de contacto
+    setTimeout(() => {
+        document.getElementById("contact-details").scrollIntoView({ behavior: 'smooth' });
+    }, 1000);
+    break;
+            case 'help':
+                response.innerHTML = "Comandos disponibles: <br>- <b>about</b>: Información del dueño<br>- <b>skills</b>: Lista de habilidades técnicas<br>- <b>clear</b>: Limpiar terminal";
+                break;
+            case 'about':
+                response.innerText = "David: Técnico especializado en implementar sistemas seguros y prevenir amenazas.";
+                break;
+            case 'skills':
+                response.innerText = "Habilidades detectadas: Seguridad de Redes, Docker, Auditorías, Automatización.";
+                break;
+            case 'clear':
+                output.innerHTML = "";
+                response.innerText = "";
+                break;
+            default:
+                response.innerText = `Comando '${input}' no reconocido. Escribe 'help'.`;
+        }
+        
+        output.appendChild(response);
+        e.target.value = "";
+        document.getElementById("terminal-body").scrollTop = document.getElementById("terminal-body").scrollHeight;
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     // Mapa de habilidades con sus descripciones
     const descriptions = {
